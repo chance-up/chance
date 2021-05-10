@@ -1,5 +1,7 @@
 // vue.config.js
 module.exports = {
-    publicPath: '/chance',
+    publicPath: process.env.NODE_ENV === 'production'
+        ? '/chance'
+        :'/',
     outputDir: 'docs'
 }
